@@ -6,5 +6,8 @@ export default defineConfig({
   build: {
     target: 'esnext',
     polyfillDynamicImport: false
+  },
+  css: {
+    globalModulePaths: ['./src/_global.css']
   }
 })
