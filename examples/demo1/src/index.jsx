@@ -7,13 +7,13 @@ import EnemyEntity from './EnemyEntity'
 import PlayerEntity from './PlayerEntity'
 
 function App() {
-    return <div>
+    return (
         <Melon>
             <Entity class={EnemyEntity}/>
             <Entity class={CoinEntity}/>
-            <Entity class={PlayerEntity}/>
+            <Entity name="mainPlayer" class={PlayerEntity}/>
         </Melon>
-    </div>
+    )
 }
 
 render(App, document.getElementById('root'))
