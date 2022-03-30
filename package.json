@@ -1,0 +1,31 @@
+{
+  "name": "melon-solid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/L1lith/Melon-Solid.git"
+  },
+  "keywords": [],
+  "author": "L1lith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/L1lith/Melon-Solid/issues"
+  },
+  "homepage": "https://github.com/L1lith/Melon-Solid#readme",
+  "dependencies": {
+    "melonjs": "^10.5.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.8",
+    "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
+    "@babel/preset-env": "^7.16.11",
+    "babel-cli": "^6.26.0",
+    "babel-preset-solid": "^1.3.13"
+  }
+}
