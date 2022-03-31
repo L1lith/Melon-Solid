@@ -11,6 +11,7 @@ function Preloader(props) {
   useReady(() => {
     me.loader.preload(props.resources, () => {
       setPreloaded(true)
+      if (typeof props.callback == 'function') props.callback()
     })
   })
   return <isPreloaded.Provider value={preloaded}>{props.children || null}</isPreloaded.Provider>
