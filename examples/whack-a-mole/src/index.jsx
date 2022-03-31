@@ -6,7 +6,7 @@ import Stage from '../../../dist/components/Stage'
 import resources from './resources'
 import * as me from 'melonjs'
 import data from './data'
-import PlayScreen from '../../platformer/src/screens/play'
+import PlayScreen from './screens/play'
 
 
 function App() {
@@ -18,14 +18,10 @@ function App() {
             data.hiscore = me.save.hiscore;
         }} audio>
             <Preloader callback={()=>{ 
-
-                // set a fade transition effect
                 me.state.transition('fade', '#000000', 250)
-
-                // start the game
                 me.state.change(me.state.PLAY)
             }} resources={resources}>
-                <Stage state={me.state.PLAY} stage={new PlayScreen()}></Stage>
+                <Stage state={me.state.PLAY} stage={new PlayScreen()}/>
             </Preloader>
         </Melon>
     )
