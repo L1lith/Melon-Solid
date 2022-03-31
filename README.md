@@ -45,3 +45,6 @@ function App(){
 }
 ```
 Plus, if we want to add some HTML to serve as our GUI, we can simple put it directly inside our Melon game!
+
+## Examples
+Want to see a few examples? I've implemented the Whack-a-Mole and Platformer games (taken from Melon.js) Look in the examples folder
