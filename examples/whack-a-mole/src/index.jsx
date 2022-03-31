@@ -11,7 +11,7 @@ import PlayScreen from './screens/play'
 
 function App() {
     return (
-        <Melon onReady={()=>{
+        <Melon width={1024} height={768} onReady={()=>{
             me.timer.maxfps = 30;
             me.save.add({hiscore : 0});
             // set the local hiscore value
