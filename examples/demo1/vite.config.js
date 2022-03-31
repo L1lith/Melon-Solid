@@ -7,7 +7,8 @@ export default defineConfig({
     target: 'esnext',
     polyfillDynamicImport: false
   },
-  css: {
-    globalModulePaths: ['./src/_global.css']
-  }
+  // css: {
+  //   globalModulePaths: ['./src/_global.css']
+  // },
+  assetsInclude: ['**/*.fnt']
 })

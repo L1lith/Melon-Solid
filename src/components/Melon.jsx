@@ -11,7 +11,7 @@ const defaultStyles = {
 export const MelonReady = createContext(null)
 
 function Melon(props) {
-    const [local, attributes] = splitProps(props, ['children', 'scale', 'parent', 'style', 'width', 'height'])
+    const [local, attributes] = splitProps(props, ['children', 'scale', 'parent', 'style', 'width', 'height', 'audio'])
     let gameCanvas
     const style = () => mergeShallow(defaultStyles, local.style)
     const [isReady, setReady] = createSignal(false)
@@ -20,6 +20,13 @@ function Melon(props) {
             const videoOptions = {parent: gameCanvas, scale: local.hasOwnProperty('scale') ? local.scale : 'auto', scaleMethod: local.hasOwnProperty('scaleMethod') ? local.scaleMethod : 'fill-min', consoleHeader: false}
             const initialized = me.video.init(isFinite(props.width) ? props.width : 650, isFinite(props.height) ? props.height : 480, videoOptions)
             if (!initialized) return alert("Your browser does not support HTML5 canvas.");
+            if (props.audio) { // ensures its not false or an empty string
+                if (typeof props.audio == 'boolean') {
+                    me.audio.init('mp3,ogg')
+                } else if (typeof props.audio == 'string') {
+                    me.audio.init(props.audio)
+                }
+            }
             setReady(true)
         })
     })
