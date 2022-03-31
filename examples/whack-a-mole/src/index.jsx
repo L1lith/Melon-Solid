@@ -19,8 +19,7 @@ function App() {
         }} audio>
             <Preloader callback={()=>{ 
                 me.state.transition('fade', '#000000', 250)
-                me.state.change(me.state.PLAY)
-            }} resources={resources}>
+            }} resources={resources} autoPlay>
                 <Stage state={me.state.PLAY} stage={new PlayScreen()}/>
             </Preloader>
         </Melon>

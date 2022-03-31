@@ -12,6 +12,9 @@ function Preloader(props) {
     me.loader.preload(props.resources, () => {
       setPreloaded(true)
       if (typeof props.callback == 'function') props.callback()
+      if (props.autoPlay === true) {
+        me.state.change(me.state.PLAY)
+      }
     })
   })
   return <isPreloaded.Provider value={preloaded}>{props.children || null}</isPreloaded.Provider>

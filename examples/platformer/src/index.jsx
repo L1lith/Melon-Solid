@@ -18,8 +18,7 @@ function App() {
             <Preloader callback={()=>{
                 me.state.transition('fade', '#FFFFFF', 250)
                 game.texture = new me.TextureAtlas(me.loader.getJSON('texture'), me.loader.getImage('texture'))
-                me.state.change(me.state.PLAY);
-            }} resources={resources}>
+            }} resources={resources} autoPlay>
                 <Stage state={me.state.PLAY} stage={new PlayScreen()}/>
                 <Entity name="FlyEntity" class={FlyEnemyEntity}/>
                 <Entity name="SlimeEntity" class={SlimeEnemyEntity}/>
