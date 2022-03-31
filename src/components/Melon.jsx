@@ -28,6 +28,7 @@ function Melon(props) {
                 }
             }
             setReady(true)
+            if (typeof props.onReady == 'function') props.onReady()
         })
     })
     return <MelonReady.Provider value={isReady}>
