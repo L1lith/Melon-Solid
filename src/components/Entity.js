@@ -1,11 +1,11 @@
-import useReady from '../hooks/useReady'
+import usePreloaded from '../hooks/usePreloaded'
 import { pool } from 'melonjs'
 
 function Entity(props) {
   if (typeof props.class != 'function') throw new Error('Please supply an entity class')
   const name = props.hasOwnProperty('name') ? props.name : props.class.name
   if (typeof name != 'string') throw new Error('Please supply an entity name')
-  useReady(() => {
+  usePreloaded(() => {
     pool.register(name, props.class)
   })
   return null

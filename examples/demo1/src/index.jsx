@@ -11,10 +11,11 @@ import resources from './resources'
 function App() {
     return (
         <Melon audio>
-            <Preloader resources={resources} callback={()=>{}}/>
-            <Entity class={EnemyEntity}/>
-            <Entity class={CoinEntity}/>
-            <Entity name="mainPlayer" class={PlayerEntity}/>
+            <Preloader resources={resources}>
+                <Entity class={EnemyEntity}/>
+                <Entity class={CoinEntity}/>
+                <Entity name="mainPlayer" class={PlayerEntity}/>
+            </Preloader>
         </Melon>
     )
 }
