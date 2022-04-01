@@ -2,16 +2,16 @@ import puppeteer from 'puppeteer'
 import runCommand from '../functions/runCommand'
 import { join } from 'path'
 
-const examplesDirectory = join(__dirname, '../../examples')
+const platformerDirectory = join(__dirname, '../../examples/platformer')
 
-describe('App.js', () => {
+describe('Melon.jsx', () => {
   let browser
   let page
   let closeServer
   beforeAll(async () => {
     browser = await puppeteer.launch()
     page = await browser.newPage()
-    closeServer = runCommand('npm run dev', join(examplesDirectory, 'platformer'))
+    closeServer = runCommand('npm run dev', platformerDirectory)
   })
 
   it('contains the game canvas', async () => {
