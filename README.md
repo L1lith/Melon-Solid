@@ -1,7 +1,9 @@
 # Melon Solid
-This project fuses the awesome frameworks Melon.js (for game development) and Solid.js (for making websites). By combining them together you can get the convience of HTML syntax while developing games using Melon.js
+
+This project fuses the awesome frameworks [Melon.js](https://www.melonjs.org) (for game development) and [Solid.js](https://www.solidjs.com/) (for making websites). By combining them together you can get the convience of HTML syntax for super easy development
 
 When using plain Melon.js we write our games like this (from the platformer example):
+
 ```jsx
 function onload() {
     if (!me.video.init(800, 600, {
@@ -27,7 +29,9 @@ function onload() {
     me.state.change(me.state.PLAY)
 }
 ```
+
 Now making games is as easy as writing HTML:
+
 ```jsx
 function App(){
     <Melon audio>
@@ -44,16 +48,19 @@ function App(){
     </Melon>
 }
 ```
+
 Plus, if we want to add some HTML to serve as our GUI, we can simple put it directly inside our Melon game!
 
 ## Examples
+
 Want to see a few examples? I've implemented the Whack-a-Mole and Platformer games (taken from Melon.js) Look in the examples folder
 
-
 ## TODO:
-### Documentation
+
+## Documentation
+
 There's currently no documentation yet, sorry. I have implemented tests though so it is working, and if you want to see how to use it try looking in the examples directory.
 
-
 ### Multiple Games/Games Unloading Properly
+
 Melon.js Currently breaks when you try to have multiple games at once, or if you load a game, unload it, and reload it again. This is a limitation within Melon.js that will hopefully be fixed soon.
