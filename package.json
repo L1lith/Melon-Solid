@@ -1,12 +1,12 @@
 {
   "name": "melon-solid",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "./index.js",
   "scripts": {
-    "prepublish": "npm run build & npm run test & copy package.json dist",
-    "publish": "cd dist & npm publish",
-    "postpublish": "cd dist & del package.json",
+    "prepub": "npm run build & npm run test & copy package.json dist",
+    "pub": "cd dist & npm publish",
+    "postpub": "cd dist & del package.json",
     "test": "jest",
     "pretty": "prettier --write \"src/**/*.js\"",
     "build": "rm -rf dist && mkdir dist && cross-env NODE_ENV=production babel src -d dist",
