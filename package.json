@@ -38,6 +38,7 @@
     "jest": "^27.5.1",
     "jest-image-snapshot": "^4.5.1",
     "puppeteer": "^13.5.2",
+    "sandhands": "^1.8.9",
     "solid-jest": "^0.2.0",
     "solid-testing-library": "^0.3.0",
     "tree-kill": "^1.2.2"
