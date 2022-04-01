@@ -57,7 +57,7 @@ Want to see a few examples? I've implemented the Whack-a-Mole and Platformer gam
 
 ## TODO:
 
-## Documentation
+### Documentation
 
 There's currently no documentation yet, sorry. I have implemented tests though so it is working, and if you want to see how to use it try looking in the examples directory.
 
