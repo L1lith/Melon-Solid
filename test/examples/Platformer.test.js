@@ -1,14 +1,12 @@
 import puppeteer from 'puppeteer'
 import runCommand from '../functions/runCommand'
 import { join } from 'path'
-import { rmSync, mkdirSync } from 'fs'
 import timer from '../functions/timer'
 import { toMatchImageSnapshot } from 'jest-image-snapshot'
 
 expect.extend({ toMatchImageSnapshot })
 
 const platformerDirectory = join(__dirname, '../../examples/platformer')
-const tmpDir = join(__dirname, 'tmp')
 
 describe('Platformer Game', () => {
   let browser
@@ -17,12 +15,6 @@ describe('Platformer Game', () => {
 
   jest.setTimeout(30000)
   beforeAll(async () => {
-    try {
-      rmSync(tmpDir, { recursive: true, force: true })
-    } catch (err) {
-      /*Do Nothing */
-    }
-    mkdirSync(tmpDir)
     browser = await puppeteer.launch({
       //headless: false,
       args: [`---window-size=${800},${800}`] // Ensure Consistent Render Target
