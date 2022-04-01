@@ -1,7 +1,7 @@
 {
   "name": "melon-solid",
-  "version": "0.0.4",
-  "description": "",
+  "version": "0.0.5",
+  "description": "Melon.js game engine bindings for Solid",
   "main": "./index.js",
   "scripts": {
     "prepub": "npm run build & npm run test & copy package.json dist & copy LICENSE.md dist & copy README.md dist",
@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/L1lith/Melon-Solid.git"
   },
-  "keywords": [],
+  "keywords": ["solidhack", "melonjs", "melon", "game", "framework", "solidjs", "best_ecosystem"],
   "author": "L1lith",
   "license": "MIT",
   "bugs": {

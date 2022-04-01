@@ -48,3 +48,12 @@ Plus, if we want to add some HTML to serve as our GUI, we can simple put it dire
 
 ## Examples
 Want to see a few examples? I've implemented the Whack-a-Mole and Platformer games (taken from Melon.js) Look in the examples folder
+
+
+## TODO:
+### Documentation
+There's currently no documentation yet, sorry. I have implemented tests though so it is working, and if you want to see how to use it try looking in the examples directory.
+
+
+### Multiple Games/Games Unloading Properly
+Melon.js Currently breaks when you try to have multiple games at once, or if you load a game, unload it, and reload it again. This is a limitation within Melon.js that will hopefully be fixed soon.
