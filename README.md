@@ -53,7 +53,10 @@ Plus, if we want to add some HTML to serve as our GUI, we can simple put it dire
 
 ## Examples
 
-Want to see a few examples? I've implemented the Whack-a-Mole and Platformer games (taken from Melon.js) Look in the examples folder
+Try out the platformer demo for yourself here!
+[https://codesandbox.io/s/melon-solid-platformer-demo-ys14wl](https://codesandbox.io/s/melon-solid-platformer-demo-ys14wl)
+
+I've also implemented the Whack-a-Mole and Platformer games (taken from Melon.js) in the examples folder
 
 ## TODO:
 
