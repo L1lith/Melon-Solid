@@ -66,4 +66,4 @@ There's currently no documentation yet, sorry. I have implemented tests though s
 
 ### Multiple Games/Games Unloading Properly
 
-Melon.js Currently breaks when you try to have multiple games at once, or if you load a game, unload it, and reload it again. This is a limitation within Melon.js that will hopefully be fixed soon.
+Melon.js Currently breaks when you try to have multiple games at once, or if you load a game, unload it, and reload it again. This is a limitation within Melon.js that will hopefully be removed soon.
