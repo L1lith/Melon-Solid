@@ -19,7 +19,8 @@ function App() {
             <Preloader callback={()=>{
                 me.state.transition('fade', '#FFFFFF', 250)
                 game.texture = new me.TextureAtlas(me.loader.getJSON('texture'), me.loader.getImage('texture'))
-            }} autoPlay><Resource name="tileset" type="image" src="data/img/tileset.png" />
+            }} autoPlay>
+                <Resource name="tileset" type="image" src="data/img/tileset.png" />
                 <Resource name="background" type="image" src="data/img/background.png" />
                 <Resource name="clouds" type="image" src="data/img/clouds.png" />
                 <Resource name="map1" type="tmx" src="data/map/map1.tmx" />

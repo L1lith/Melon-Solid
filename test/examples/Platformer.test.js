@@ -30,7 +30,7 @@ describe('Platformer Game', () => {
     const image = await page.screenshot()
     expect(image).toMatchImageSnapshot({
       comparisonMethod: 'ssim',
-      failureThreshold: 0.04, // Allow up to 4% difference as it's animated
+      failureThreshold: 0.2, // Allow up to 20% difference as it's animated
       failureThresholdType: 'percent'
     })
   })

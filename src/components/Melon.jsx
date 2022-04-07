@@ -5,19 +5,20 @@ import mergeShallow from '../functions/mergeShallow'
 const defaultStyles = {
     'text-align': 'center',
     height: '100vh',
-    width: '100vw'
+    width: '100vw',
+    overflow: 'hidden'
 }
 
 export const MelonReady = createContext(null)
 
 function Melon(props) {
-    const [local, attributes] = splitProps(props, ['children', 'scale', 'parent', 'style', 'width', 'height', 'audio'])
+    const [local, attributes] = splitProps(props, ['children', 'scale', 'parent', 'style', 'width', 'height', 'audio', 'scaleMethod'])
     let gameCanvas
     const style = () => mergeShallow(defaultStyles, local.style)
     const [isReady, setReady] = createSignal(false)
     onMount(()=>{
         me.device.onReady(() => {
-            const videoOptions = {parent: gameCanvas, scale: local.hasOwnProperty('scale') ? local.scale : 'auto', scaleMethod: local.hasOwnProperty('scaleMethod') ? local.scaleMethod : 'fill-min', consoleHeader: false}
+            const videoOptions = {parent: gameCanvas, scale: typeof local.scale == 'string' ? local.scale : 'auto', scaleMethod: typeof local.scaleMethod == 'string' ? local.scaleMethod : 'fill-max', consoleHeader: false}
             const initialized = me.video.init(isFinite(props.width) ? props.width : 650, isFinite(props.height) ? props.height : 480, videoOptions)
             if (!initialized) return alert("Your browser does not support HTML5 canvas.");
             if (props.audio) { // ensures its not false or an empty string
