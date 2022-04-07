@@ -6,9 +6,9 @@ import { toMatchImageSnapshot } from 'jest-image-snapshot'
 
 expect.extend({ toMatchImageSnapshot })
 
-const platformerDirectory = join(__dirname, '../../examples/platformer')
+const overlayDirectory = join(__dirname, '../../examples/html-overlay')
 
-describe('Platformer Game', () => {
+describe('HTML Overlay', () => {
   let browser
   let page
   let closeServer
@@ -17,20 +17,20 @@ describe('Platformer Game', () => {
   beforeAll(async () => {
     browser = await puppeteer.launch({
       //headless: false,
-      args: [`---window-size=${800},${800}`] // Ensure Consistent Render Target
+      args: [`---window-size=${1000},${1500}`] // Ensure Consistent Render Target
     })
     page = await browser.newPage()
-    closeServer = runCommand('npm run dev', platformerDirectory)
+    closeServer = runCommand('npm run dev', overlayDirectory)
   })
 
-  it('renders the game properly', async () => {
-    await page.goto('http://localhost:9046')
+  it('renders the html overlay properly', async () => {
+    await page.goto('http://localhost:8052')
     await page.waitForSelector('canvas')
     await timer(10000) // Wait 10 seconds for the game to load
     const image = await page.screenshot()
     expect(image).toMatchImageSnapshot({
       comparisonMethod: 'ssim',
-      failureThreshold: 0.2, // Allow up to 20% difference as it's animated
+      failureThreshold: 0.005, // Allow up to 0.5% difference as it should always be the same
       failureThresholdType: 'percent'
     })
   })

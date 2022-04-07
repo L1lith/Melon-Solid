@@ -15,7 +15,7 @@ describe('Melon.jsx', () => {
   })
 
   it('contains the game canvas', async () => {
-    await page.goto('http://localhost:3000')
+    await page.goto('http://localhost:9046')
     await page.waitForSelector('canvas')
   })
 

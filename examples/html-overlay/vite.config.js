@@ -12,6 +12,6 @@ export default defineConfig({
   // },
   assetsInclude: ['**/*.fnt'],
   server: {
-    port: 9046
+    port: 8052
   }
 })
