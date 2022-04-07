@@ -2,12 +2,13 @@
 
 This project fuses the awesome frameworks [Melon.js](https://www.melonjs.org) (for game development) and [Solid.js](https://www.solidjs.com/) (for making websites). By combining them together you can get the convience of HTML syntax for super easy development
 
+
 When using plain Melon.js we write our games like this (from the platformer example):
 
 ```jsx
 function onload() {
     if (!me.video.init(800, 600, {
-      parent: 'screen',
+        parent: 'screen',
       scaleMethod: 'flex-width',
       renderer: me.video.AUTO,
       preferWebGL1: false,
@@ -57,6 +58,9 @@ Try out the platformer demo for yourself here!
 [https://codesandbox.io/s/melon-solid-platformer-demo-ys14wl](https://codesandbox.io/s/melon-solid-platformer-demo-ys14wl)
 
 I've also implemented the Whack-a-Mole and Platformer games (taken from Melon.js) in the examples folder
+
+## More on why is Melon Solid useful
+Feel free to read my writeup [here](https://melonjs.discourse.group/t/melon-solid-a-jsx-approach-for-melon-js/14)
 
 ## TODO:
 
