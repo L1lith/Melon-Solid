@@ -34,7 +34,9 @@ function Melon(props) {
     })
     return <MelonReady.Provider value={isReady}>
         <div style={style()} className="gameHolder" ref={gameCanvas} {...attributes}>
-        {props.children || null}
+            <div style={{position: 'absolute', top: 0, left: 0, width: "100%", height: "100%"}}>
+                {props.children || null}
+            </div>
         </div>
     </MelonReady.Provider>
 }
