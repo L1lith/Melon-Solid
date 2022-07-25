@@ -1,4 +1,4 @@
-import { isPreloaded } from '../components/Preloader.js'
+import { isPreloaded } from '../components/Preloader.jsx'
 import { createEffect, useContext } from 'solid-js'
 
 function usePreloaded(callback, repeat = false) {

@@ -1,4 +1,4 @@
-import { resourceList } from './Preloader.js'
+import { resourceList } from './Preloader.jsx'
 import { useContext } from 'solid-js'
 
 function Resource(props) {
