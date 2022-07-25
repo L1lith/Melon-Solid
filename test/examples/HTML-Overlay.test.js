@@ -27,12 +27,13 @@ describe('HTML Overlay', () => {
     })
     page = await browser.newPage()
     closeServer = runCommand('npm run dev', overlayDirectory)
+    await timer(5000) // Let the web server setup
   })
 
   it('renders the html overlay properly', async () => {
     await page.goto('http://localhost:8052')
     await page.waitForSelector('canvas')
-    await timer(10000) // Wait 10 seconds for the game to load
+    await timer(15000) // Wait 15 seconds for the game to load
     const image = await page.screenshot()
     expect(image).toMatchImageSnapshot({
       comparisonMethod: 'ssim',

@@ -27,12 +27,13 @@ describe('Platformer Game', () => {
     })
     page = await browser.newPage()
     closeServer = runCommand('npm run dev', platformerDirectory)
+    await timer(5000) // Let the web server setup
   })
 
   it('renders the game properly', async () => {
     await page.goto('http://localhost:9046')
     await page.waitForSelector('canvas')
-    await timer(10000) // Wait 10 seconds for the game to load
+    await timer(15000) // Wait 15 seconds for the game to load
     const image = await page.screenshot()
     expect(image).toMatchImageSnapshot({
       comparisonMethod: 'ssim',
