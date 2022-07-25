@@ -1,6 +1,6 @@
 import {onMount, splitProps, createSignal, createContext} from 'solid-js'
 import * as me from 'melonjs'
-import mergeShallow from '../functions/mergeShallow'
+import mergeShallow from '../functions/mergeShallow.js'
 
 const defaultStyles = {
     'text-align': 'center',

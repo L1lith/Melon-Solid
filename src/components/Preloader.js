@@ -1,5 +1,5 @@
 import * as me from 'melonjs'
-import useReady from '../hooks/useReady'
+import useReady from '../hooks/useReady.js'
 import { createSignal, createContext } from 'solid-js'
 
 export const isPreloaded = createContext(null)

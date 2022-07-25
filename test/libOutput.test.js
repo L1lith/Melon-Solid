@@ -9,10 +9,8 @@ const basicOutputFormat = {
 
 describe('Library Exports', () => {
   let lib
-  it('can be imported', () => {
-    expect(() => {
-      lib = require('../dist/index.js')
-    }).not.toThrow()
+  it('can be imported', async () => {
+    lib = await import('../dist/index.js')
   })
   it('has the right basic structure', () => {
     expect(details(lib, basicOutputFormat)).toEqual(null)

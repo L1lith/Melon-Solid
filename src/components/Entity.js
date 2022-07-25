@@ -1,4 +1,4 @@
-import usePreload from '../hooks/usePreload'
+import usePreload from '../hooks/usePreload.js'
 import { pool } from 'melonjs'
 
 function Entity(props) {

@@ -1,4 +1,4 @@
-import usePreload from '../hooks/usePreload'
+import usePreload from '../hooks/usePreload.js'
 import * as me from 'melonjs'
 
 function Stage(props) {

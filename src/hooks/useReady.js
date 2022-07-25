@@ -1,4 +1,4 @@
-import { MelonReady } from '../components/Melon'
+import { MelonReady } from '../components/Melon.js'
 import { createEffect, useContext } from 'solid-js'
 
 function useReady(callback, repeat = false) {
