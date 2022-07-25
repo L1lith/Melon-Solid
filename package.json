@@ -7,10 +7,9 @@
   "homepage": "https://codesandbox.io/s/melon-solid-platformer-demo-ys14wl",
   "contributors": [
     {
-      "name": "Lilith",
-      "email": "redacted@redacted.redacted",
-      "url": "https://www.github.com/L1lith",
-      "discord_username_and_#id_md5_hash": "0cf31163e2413bc69f8a16dc7595246d"
+      "name": "L1lith",
+      "email": "developer@webslc.com",
+      "url": "https://www.github.com/L1lith"
     }
   ],
   "scripts": {
