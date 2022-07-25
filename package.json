@@ -17,7 +17,7 @@
     "prepub": "npm run build & npm run test & copy package.json dist & copy LICENSE.md dist & copy README.md dist",
     "pub": "cd dist & npm publish",
     "postpub": "cd dist & del package.json",
-    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "pretty": "prettier --write \"src/**/*.js\"",
     "build": "rm -rf dist && mkdir dist && cross-env NODE_ENV=production babel src -d dist",
     "dev": "rm -rf dist && mkdir dist && babel src -d dist --watch"
