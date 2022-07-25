@@ -123,3 +123,6 @@ dist
 
 # Image Snapshots Debug Diffs
 __diff_output__
+
+# Mac
+.DS_Store
