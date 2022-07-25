@@ -3,6 +3,12 @@ import runCommand from '../functions/runCommand'
 import { join } from 'path'
 import timer from '../functions/timer'
 import { toMatchImageSnapshot } from 'jest-image-snapshot'
+import { dirname } from 'path'
+import { fileURLToPath } from 'url'
+import { jest } from '@jest/globals'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 expect.extend({ toMatchImageSnapshot })
 

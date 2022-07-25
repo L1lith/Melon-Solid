@@ -1,6 +1,11 @@
-const { join } = require('path')
+import { join } from 'path'
+import { dirname } from 'path'
+import { fileURLToPath } from 'url'
 
-module.exports = {
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
+export default {
   testMatch: [join(__dirname, 'test/**/*.test.js')]
   //testEnvironment: 'jsdom'
 }

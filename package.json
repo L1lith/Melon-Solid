@@ -4,7 +4,8 @@
   "description": "Melon.js game engine bindings for Solid",
   "main": "./index.js",
   "info": "This library combines the powers of Melon and Solid for easy development and deployment of games that make the best of reactive HTML and WebGL. Melon.js has a number of cool features, especially the Tiled editor for quick map development. Solid.js improves upon the Melon.js syntax, and makes it easy to deploy to Astro, Vite, or wherever you like as well as create responsive GUIs with HTML on top of your WebGL accelerated game renderer. This library also includes end to end testing.",
-  "homepage": "https://github.com/L1lith/Melon-Solid",
+  "homepage": "https://github.com/L1lith/Melon-Solid#readme",
+  "type": "module",
   "contributors": [
     {
       "name": "L1lith",
@@ -16,7 +17,7 @@
     "prepub": "npm run build & npm run test & copy package.json dist & copy LICENSE.md dist & copy README.md dist",
     "pub": "cd dist & npm publish",
     "postpub": "cd dist & del package.json",
-    "test": "jest",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
     "pretty": "prettier --write \"src/**/*.js\"",
     "build": "rm -rf dist && mkdir dist && cross-env NODE_ENV=production babel src -d dist",
     "dev": "rm -rf dist && mkdir dist && babel src -d dist --watch"
@@ -25,13 +26,20 @@
     "type": "git",
     "url": "git+https://github.com/L1lith/Melon-Solid.git"
   },
-  "keywords": ["solidhack", "melonjs", "melon", "game", "framework", "solidjs", "best_ecosystem"],
+  "keywords": [
+    "solidhack",
+    "melonjs",
+    "melon",
+    "game",
+    "framework",
+    "solidjs",
+    "best_ecosystem"
+  ],
   "author": "L1lith",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/L1lith/Melon-Solid/issues"
   },
-  "homepage": "https://github.com/L1lith/Melon-Solid#readme",
   "dependencies": {
     "melonjs": "^10.5.2"
   },
@@ -39,6 +47,7 @@
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.8",
     "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.18.6",
     "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
     "babel-cli": "^6.26.0",
