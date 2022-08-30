@@ -10,7 +10,6 @@
   "scripts": {
     "prepub": "npm run build",
     "pub": "cd dist & npm publish",
-    "postpub": "cd dist & del package.json",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "pretty": "prettier --write \"src/**/*.js\"",
     "build": "rm -rf dist && cp -R src dist && cp package.json dist && cp LICENSE.md dist && cp README.md dist && json -f dist/package.json -I -e 'delete this.scripts; delete this.devDependencies; delete this.keywords;'",
