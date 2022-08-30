@@ -8,7 +8,7 @@
   "type": "module",
   "contributors": ["L1lith"],
   "scripts": {
-    "prepub": "npm run build & npm run test",
+    "prepub": "npm run build",
     "pub": "cd dist & npm publish",
     "postpub": "cd dist & del package.json",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
